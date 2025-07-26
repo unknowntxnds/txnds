@@ -43,4 +43,8 @@ function mainSection() {
     $.get('includes/footer.html', function(data) {
         $('#footer-section').append(data);
     });
+
+    $.get('includes/projects.html', function(data) {
+        $('#project-section').append(data);
+    });
 }
