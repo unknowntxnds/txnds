@@ -1460,7 +1460,7 @@ section,
 }
 
 .floating-messenger-btn:hover {
-  background-color: #0065F8;
+  background-color: var(--surface-color);
 }
 
 
