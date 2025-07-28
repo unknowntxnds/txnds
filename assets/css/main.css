@@ -1557,3 +1557,8 @@ section,
   background-color: var(--accent-color);
   color: black;
 }
+
+#github-contributions img {
+  width: 100%;
+  height: auto;
+}
