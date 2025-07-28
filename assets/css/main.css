@@ -659,7 +659,7 @@ section,
   padding: 80px 40px;
   display: flex;
   align-items: center;
-  gap: 10px; /* spacing between image and container */
+  gap: 10px;
 }
 
 .hero .hero-image img {
@@ -704,9 +704,9 @@ section,
 .hero .social-links a {
   background-color: color-mix(in srgb, var(--default-color), transparent 90%);
   color: var(--default-color);
-  font-size: 14px;
-  width: 40px;
-  height: 40px;
+  font-size: 15px;
+  width: 35px;
+  height: 35px;
   border-radius: 50px;
   display: inline-flex;
   align-items: center;
@@ -736,7 +736,7 @@ section,
   .hero .hero-image img {
     position: static;
     max-width: 400px;
-    height: 60vh;
+    height: 58vh;
     margin: 0 auto;
   }
 
