@@ -719,7 +719,7 @@ section,
   background-color: var(--accent-color);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 575px) {
   .hero {
     flex-direction: column;
     padding: 40px 20px;
@@ -735,16 +735,17 @@ section,
 
   .hero .hero-image img {
     position: static;
-    max-width: 280px;
+    max-width: 400px;
+    height: 50vh;
     margin: 0 auto;
   }
 
   .hero h2 {
-    font-size: 30px;
+    font-size: 32px;
   }
 
   .hero p {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .hero .btn-cv {
