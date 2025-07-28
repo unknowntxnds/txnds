@@ -47,4 +47,5 @@ function mainSection() {
     $.get('includes/projects.html', function(data) {
         $('#project-section').append(data);
     });
+
 }
