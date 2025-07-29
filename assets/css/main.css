@@ -614,7 +614,7 @@ section,
 # Global Section Titles
 --------------------------------------------------------------*/
 .section-title {
-  padding-bottom: 60px;
+  padding-bottom: 30px;
   position: relative;
 }
 
@@ -1307,7 +1307,7 @@ section,
   transition: all ease-in-out 0.3s;
   background: rgba(0, 0, 0, 0.6);
   padding: 15px;
-  border-radius: 6px;
+  border-radius: 3px;
 }
 
 .portfolio .portfolio-content .portfolio-info h4 {
@@ -1359,7 +1359,7 @@ section,
 
 .portfolio .portfolio-content:hover img {
   transform: scale(1.1);
-  border-radius: 6px;
+  border-radius: 3px;
 }
 
 /*--------------------------------------------------------------
