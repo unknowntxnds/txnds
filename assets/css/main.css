@@ -705,13 +705,13 @@ section,
   background-color: color-mix(in srgb, var(--default-color), transparent 90%);
   color: var(--default-color);
   font-size: 15px;
-  width: 35px;
-  height: 35px;
+  width: 37px;
+  height: 37px;
   border-radius: 50px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-right: 20px;
+  margin-right: 10px;
   transition: 0.3s;
 }
 
@@ -820,7 +820,7 @@ section,
 }
 
 .about img {
-  border-radius: 12px;
+  border-radius: 6px;
 }
 
 /*--------------------------------------------------------------
@@ -1521,7 +1521,7 @@ section,
 }
 
 .green-x {
-  color: #18D26E;
+  color: var(--accent-color);
 }
 
 .floating-messenger-btn {
@@ -1585,7 +1585,7 @@ section,
 
 .btn-cv {
   background-color: #252526;
-  border: 2px solid #18D26E;
+  border: 2px solid var(--accent-color);
   color: white;
 }
 
