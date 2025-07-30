@@ -916,12 +916,20 @@ section,
   transition: 0.3s;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
   position: relative;
+  height: 80px;     /* fixed height */
+  overflow: hidden;  /* hide overflowing content */
+  box-sizing: border-box; /* include padding and border in size */
 }
 
 .interests .features-item i {
-  font-size: 32px;
+  font-size: 40px;
   padding-right: 10px;
-  line-height: 0;
+}
+
+.interests .features-item img {
+  padding-right: 10px;
+  width: 52px;
+  height: 52px;
 }
 
 .interests .features-item h3 {
