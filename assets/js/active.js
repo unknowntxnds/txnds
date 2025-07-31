@@ -5,6 +5,14 @@ $(document).ready(function () {
     $('#copyright-year').text(new Date().getFullYear());
     $('#copyright-year2').text(new Date().getFullYear());
     // sectionActive();
+
+    function isMobile() {
+        return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+
+    if (isMobile()) {
+        $('.floating-messenger-btn').removeAttr('target');
+    }
 });
 
 function highlightNavOnScroll() {
