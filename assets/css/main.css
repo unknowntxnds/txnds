@@ -1565,7 +1565,8 @@ section,
 }
 
 .floating-messenger-btn:hover {
-  background-color: var(--surface-color);
+  background-color: #18d26fc7;
+  color: #252526;
 }
 
 .cloud-pop {
