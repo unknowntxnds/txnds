@@ -1532,9 +1532,22 @@ section,
   color: var(--accent-color);
 }
 
-.floating-messenger-btn {
+/*--------------------------------------------------------------
+# Messenger Floating Button
+--------------------------------------------------------------*/
+.messenger-container {
   position: fixed;
   bottom: 20px;
+  right: 20px;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.floating-messenger-btn {
+  position: fixed;
+  bottom: 35px;
   right: 20px;
   background-color: var(--accent-color); 
   color: #252526;
@@ -1555,6 +1568,43 @@ section,
   background-color: var(--surface-color);
 }
 
+.cloud-pop {
+  position: absolute;
+  bottom: 73px;
+  right: 0;
+  background: #fff;
+  color: #333;
+  padding: 8px 12px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-size: 0.9rem;
+  font-weight: 400;
+  white-space: nowrap;
+  animation: cloudFade 2s ease-in-out infinite;
+  pointer-events: none;
+  border: 1px solid var(--accent-color);
+}
+
+.cloud-pop::after {
+  content: '';
+  position: absolute;
+  bottom: -14px;
+  right: 17px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+}
+
+@keyframes cloudFade {
+  0%, 100% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 /*--------------------------------------------------------------
 # Scroll Top Button
@@ -1563,12 +1613,12 @@ section,
   position: fixed;
   visibility: hidden;
   opacity: 0;
-  right: 20px; /* align right with messenger button */
-  bottom: 80px; /* position just above messenger */
+  right: 27px; /* align right with messenger button */
+  bottom: 150px; 
   z-index: 100000;
   background-color: var(--accent-color);
-  width: 44px;
-  height: 44px;
+  width: 35px;
+  height: 35px;
   border-radius: 50px;
   transition: all 0.4s;
 }
@@ -1588,7 +1638,7 @@ section,
   visibility: visible;
   opacity: 1;
   bottom: 15px;
-  bottom: 80px;
+  bottom: 140px;
 }
 
 .btn-cv {
