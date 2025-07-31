@@ -10,8 +10,18 @@ $(document).ready(function () {
         return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     }
 
+
+    const messengerLink = $('.floating-messenger-btn');
+
     if (isMobile()) {
-        $('.floating-messenger-btn').removeAttr('target');
+        messengerLink.removeAttr('target');
+        messengerLink.off('click').on('click', function (e) {
+            e.preventDefault();
+            // Redirect in the same tab - triggers Messenger app or web
+            window.location.href = messengerLink.attr('href');
+        });
+    } else {
+        messengerLink.attr('target', '_blank');
     }
 });
 
