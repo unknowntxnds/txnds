@@ -1589,7 +1589,7 @@ section,
   content: '';
   position: absolute;
   bottom: -14px;
-  right: 17px;
+  right: 15px;
   border-width: 8px;
   border-style: solid;
   border-color: white transparent transparent transparent;
@@ -1613,7 +1613,7 @@ section,
   position: fixed;
   visibility: hidden;
   opacity: 0;
-  right: 27px; /* align right with messenger button */
+  right: 27px; 
   bottom: 150px; 
   z-index: 100000;
   background-color: var(--accent-color);
