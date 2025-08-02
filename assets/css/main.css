@@ -36,22 +36,10 @@
   --nav-dropdown-background-color: #1a1a1a; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #fafafa; /* Used for navigation links of the dropdown items in the navigation menu. */
   --nav-dropdown-hover-color: #18d26e; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-bg-color: rgba(0, 0, 0, 0.3);
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
-
-.light-background {
-  --background-color: #1a1a1a;
-  --surface-color: #343434;
-}
-
-.dark-background {
-  --background-color: rgba(15, 15, 15, 0.975);
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
-  --surface-color: #292929f9;
-  --contrast-color: #000000;
-}
 
 /* Smooth scroll */
 :root {
@@ -66,6 +54,24 @@ body {
   background-color: var(--background-color);
   font-family: var(--default-font);
 }
+
+body.light-mode {
+  --background-color: #ffffff;
+  --default-color: #212529;
+  --heading-color: #000000;
+  /* --accent-color: #007bff; */
+  --surface-color: #f8f9fa;
+  --contrast-color: #ffffff;
+
+  --nav-color: #212529;
+  /* --nav-hover-color: #007bff; */
+  --nav-mobile-background-color: #ffffff;
+  --nav-dropdown-background-color: #f8f9fa;
+  --nav-dropdown-color: #212529;
+  --nav-bg-color: rgba(255, 255, 255, 0.562);
+  /* --nav-dropdown-hover-color: #007bff; */
+}
+
 
 a {
   color: var(--accent-color);
@@ -175,7 +181,7 @@ h6 {
 /* Global Header on Scroll
 ------------------------------*/
 .scrolled .header {
-  --background-color: rgba(0, 0, 0, 0.3);
+  --background-color: var(--nav-bg-color);
 }
 
 /*--------------------------------------------------------------
@@ -909,8 +915,7 @@ section,
 # Interests Section
 --------------------------------------------------------------*/
 .interests .features-item {
-  /* background-color: var(--surface-color); */
-  background-color: #1E201E;
+  background-color: var(--surface-color);
   display: flex;
   align-items: center;
   padding: 20px;
@@ -1551,7 +1556,7 @@ section,
   bottom: 35px;
   right: 20px;
   background-color: var(--accent-color); 
-  color: #252526;
+  color: var(--surface-color);
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -1574,8 +1579,8 @@ section,
   position: absolute;
   bottom: 73px;
   right: 0;
-  background: #fff;
-  color: #333;
+  background: var(--default-color);
+  color: var(--surface-color);
   padding: 8px 12px;
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -1594,7 +1599,7 @@ section,
   right: 15px;
   border-width: 8px;
   border-style: solid;
-  border-color: white transparent transparent transparent;
+  border-color: var(--default-color) transparent transparent transparent;
 }
 
 @keyframes cloudFade {
@@ -1657,4 +1662,41 @@ section,
 #github-contributions img {
   width: 100%;
   height: auto;
+}
+
+/* Custom switch size */
+.custom-switch-icon .form-check-input {
+  width: 3.5rem;
+  height: 1.8rem;
+  background-color: #979797;
+  border: none;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Customize the thumb (circle) */
+.custom-switch-icon .form-check-input::before {
+  content: "🌙";
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* When checked (light mode) */
+.custom-switch-icon .form-check-input:checked::before {
+  content: "☀️";
+  left: calc(100% - 1.58rem); /* Move to right */
+}
+
+/* Hide the default slider circle */
+.custom-switch-icon .form-check-input:checked {
+  background-color: #f1c40f;
+}
+
+#light-mode-toggle {
+  margin-right: 2rem;
+  margin-bottom: 0.4rem;
 }

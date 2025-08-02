@@ -23,8 +23,28 @@ $(document).ready(function () {
     } else {
         messengerLink.attr('target', '_blank');
     }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+        $('body').addClass('light-mode');
+        $('#light-mode-switch').prop('checked', true);
+    }
+
+    // Handle theme toggle
+    $('#light-mode-switch').on('change', lightMode);
 });
 
+function lightMode() {
+    const isChecked = $('#light-mode-switch').is(':checked');
+
+    if (isChecked) {
+        $('body').addClass('light-mode');
+        localStorage.setItem('theme', 'light');
+    } else {
+        $('body').removeClass('light-mode');
+        localStorage.setItem('theme', 'dark');
+    }
+}
 function highlightNavOnScroll() {
     const scrollPosition = $(window).scrollTop();
     const sections = $("section[id]");
