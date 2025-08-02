@@ -147,7 +147,7 @@ h6 {
   --background-color: rgba(0, 0, 0, 0);
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 15px 0;
+  padding: 12px 0;
   transition: all 0.5s;
   z-index: 997;
 }
@@ -175,7 +175,7 @@ h6 {
 /* Global Header on Scroll
 ------------------------------*/
 .scrolled .header {
-  --background-color: rgba(0, 0, 0, 0.8);
+  --background-color: rgba(0, 0, 0, 0.3);
 }
 
 /*--------------------------------------------------------------
@@ -909,7 +909,8 @@ section,
 # Interests Section
 --------------------------------------------------------------*/
 .interests .features-item {
-  background-color: var(--surface-color);
+  /* background-color: var(--surface-color); */
+  background-color: #1E201E;
   display: flex;
   align-items: center;
   padding: 20px;
