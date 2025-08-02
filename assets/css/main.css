@@ -1614,8 +1614,8 @@ section,
   position: fixed;
   visibility: hidden;
   opacity: 0;
-  right: 27px; 
-  bottom: 150px; 
+  right: 85px; 
+  bottom: 20px; 
   z-index: 100000;
   background-color: var(--accent-color);
   width: 35px;
@@ -1639,7 +1639,7 @@ section,
   visibility: visible;
   opacity: 1;
   bottom: 15px;
-  bottom: 140px;
+  bottom: 40px;
 }
 
 .btn-cv {
