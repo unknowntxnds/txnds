@@ -1,38 +1,30 @@
 $(document).ready(function () {
     $(window).on('load scroll', highlightNavOnScroll);
+    isMobile();
+    openMessenger();
+    savedTheme();
     highlightNavOnScroll();
     getAge();
     $('#copyright-year').text(new Date().getFullYear());
     $('#copyright-year2').text(new Date().getFullYear());
     // sectionActive();
+});
 
-    function isMobile() {
-        return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    }
+function isMobile() {
+    return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
 
-
-    const messengerLink = $('.floating-messenger-btn');
+function openMessenger(e) {
+    const messengerLink = $('#messenger_chat');
 
     if (isMobile()) {
         messengerLink.removeAttr('target');
-        messengerLink.off('click').on('click', function (e) {
-            e.preventDefault();
-            // Redirect in the same tab - triggers Messenger app or web
-            window.location.href = messengerLink.attr('href');
-        });
+        e.preventDefault();
+        window.location.href = messengerLink.attr('href');
     } else {
         messengerLink.attr('target', '_blank');
     }
-
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'light') {
-        $('body').addClass('light-mode');
-        $('#light-mode-switch').prop('checked', true);
-    }
-
-    // Handle theme toggle
-    $('#light-mode-switch').on('change', lightMode);
-});
+}
 
 function lightMode() {
     const isChecked = $('#light-mode-switch').is(':checked');
@@ -43,6 +35,14 @@ function lightMode() {
     } else {
         $('body').removeClass('light-mode');
         localStorage.setItem('theme', 'dark');
+    }
+}
+
+function savedTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+        $('body').addClass('light-mode');
+        $('#light-mode-switch').prop('checked', true);
     }
 }
 
