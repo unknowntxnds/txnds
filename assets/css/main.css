@@ -1666,37 +1666,50 @@ section,
 
 /* Custom switch size */
 .custom-switch-icon .form-check-input {
-  width: 3.5rem;
+  width: 3.2rem;
   height: 1.8rem;
-  background-color: #979797;
+  background-color: #9797978a;
   border: none;
   position: relative;
   cursor: pointer;
+
 }
 
 /* Customize the thumb (circle) */
 .custom-switch-icon .form-check-input::before {
-  content: "🌙";
+  /* content: "🌙"; */
+  content: "";
+  display: block;
+  width: 1.4rem;
+  height: 1.4rem;
+  background-color: #D9EAFD;
+  border-radius: 50%;
+  background-image: url('../img/components/moon.svg');
+  background-size: 70% 70%;
+  background-repeat: no-repeat;
+  background-position: center;
   position: absolute;
   top: 50%;
   left: 2px;
   transform: translateY(-50%);
-  font-size: 1rem;
   transition: all 0.3s ease;
+
 }
 
 /* When checked (light mode) */
 .custom-switch-icon .form-check-input:checked::before {
-  content: "☀️";
+  /* content: "☀️"; */
+  background-image: url('../img/components/sun.svg');
   left: calc(100% - 1.58rem); /* Move to right */
+  background-color: white;
 }
 
 /* Hide the default slider circle */
 .custom-switch-icon .form-check-input:checked {
-  background-color: #f1c40f;
+  background-color: #ffcc00a4;
 }
 
 #light-mode-toggle {
-  margin-right: 2rem;
+  margin-right: 1.5rem;
   margin-bottom: 0.4rem;
 }

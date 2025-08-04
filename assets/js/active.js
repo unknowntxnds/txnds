@@ -45,6 +45,7 @@ function lightMode() {
         localStorage.setItem('theme', 'dark');
     }
 }
+
 function highlightNavOnScroll() {
     const scrollPosition = $(window).scrollTop();
     const sections = $("section[id]");
