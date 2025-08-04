@@ -37,6 +37,7 @@
   --nav-dropdown-color: #fafafa; /* Used for navigation links of the dropdown items in the navigation menu. */
   --nav-dropdown-hover-color: #18d26e; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
   --nav-bg-color: rgba(0, 0, 0, 0.3);
+  --nav-btn: color-mix(in srgb, #000000, transparent 50%);
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -62,7 +63,7 @@ body.light-mode {
   /* --accent-color: #007bff; */
   --surface-color: #f8f9fa;
   --contrast-color: #ffffff;
-
+  --nav-btn: color-mix(in srgb, #212529, transparent 80%);
   --nav-color: #212529;
   /* --nav-hover-color: #007bff; */
   --nav-mobile-background-color: #ffffff;
@@ -320,7 +321,7 @@ h6 {
 }
 
 /* Mobile Navigation */
-@media (max-width: 1199px) {
+/* @media (max-width: 1199px) {
   .mobile-nav-toggle {
     color: var(--nav-color);
     font-size: 28px;
@@ -443,7 +444,125 @@ h6 {
   .mobile-nav-active .navmenu>ul {
     display: block;
   }
+} */
+
+
+@media (max-width: 1199px) {
+  .mobile-nav-toggle {
+    color: var(--nav-color);
+    font-size: 28px;
+    line-height: 0;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: color 0.3s;
+    z-index: 10000; 
+    position: fixed;
+    top: 15px;
+    right: 85px;
+  }
+
+  .navmenu {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 280px; 
+    height: 100vh;
+    background-color: var(--nav-mobile-background-color);
+    padding-top: 60px; 
+    z-index: 9997;
+    overflow-y: auto;
+    transition: left 0.3s ease;
+    box-shadow: 2px 0 12px rgba(0,0,0,0.2);
+  }
+
+  .navmenu ul {
+    display: block; 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navmenu a,
+  .navmenu a:focus {
+    color: var(--nav-dropdown-color);
+    padding: 12px 20px;
+    font-family: var(--nav-font);
+    font-size: 17px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    transition: 0.3s;
+    border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  }
+
+  .navmenu a i,
+  .navmenu a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  }
+
+  .navmenu a i:hover,
+  .navmenu a:focus i:hover {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+  }
+
+  .navmenu a:hover,
+  .navmenu .active,
+  .navmenu .active:focus {
+    color: var(--nav-dropdown-hover-color);
+  }
+
+  .navmenu .active i,
+  .navmenu .active:focus i {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+    transform: rotate(180deg);
+  }
+
+  .navmenu .dropdown ul {
+    display: none;
+    padding-left: 15px;
+    margin: 0;
+    background-color: var(--nav-dropdown-background-color);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .navmenu .dropdown ul ul {
+    background-color: rgba(33, 37, 41, 0.1);
+  }
+
+  .navmenu .dropdown>.dropdown-active {
+    display: block;
+    background-color: rgba(33, 37, 41, 0.03);
+  }
+
+  .mobile-nav-active {
+    overflow: hidden;
+  }
+
+  .mobile-nav-active .navmenu {
+    left: 0; 
+  }
+
+  .mobile-nav-active .mobile-nav-toggle {
+    color: var(--default-color);
+    background-color: var(--nav-btn);
+    border-radius: 50%;
+  }
 }
+
 
 /*--------------------------------------------------------------
 # Global Footer
