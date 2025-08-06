@@ -17,5 +17,5 @@ I’m an aspiring software developer with a degree in **BS Information Technolog
 
 ```bash
 Languages:     HTML | CSS | JavaScript | PHP | Python
-Frameworks:    Bootstrap | Laravel | React
-Tools:         Git | VS Code | Figma | Postman
+Frameworks:    Bootstrap | Laravel | React | Flutter
+Tools:         Git | VS Code | Postman
