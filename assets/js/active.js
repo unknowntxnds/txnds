@@ -60,7 +60,7 @@ function downloadResumePDF() {
         $progressText.text('100%');
 
         setTimeout(() => {
-            doc.save('Tandoy Resume.pdf');
+            doc.save('Tandoy_Resume.pdf');
             $clone.remove();
             $progressContainer.hide();
             $progressBar.css('width', '0%');
