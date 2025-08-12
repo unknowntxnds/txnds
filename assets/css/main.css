@@ -1223,6 +1223,40 @@ section,
   border: 2px solid var(--accent-color);
 }
 
+/* Styled progress bar container */
+.resume .progress-container {
+  width: 20%;
+  height: 20px;
+  background-color: var(--default-color);
+  border-radius: 10px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+/* Progress bar itself */
+.resume .progress-bar {
+  position: relative;
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent-color), #00ccff);
+  border-radius: 10px;
+  transition: width 0.2s ease;
+  box-shadow: 0 0 8px #00ccff;
+  overflow: visible;
+  min-width: 30px;
+}
+
+.resume .progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: 600;
+  font-size: 12px;
+  pointer-events: none; /* let clicks pass through */
+  white-space: nowrap;
+}
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
